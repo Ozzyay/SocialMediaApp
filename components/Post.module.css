@@ -1,13 +1,13 @@
 .card {
   width: 600px;
-  height: 170px;
+  min-height: 170px;
+  height: auto;
 }
 
 @media (max-width: 650px) {
   .card {
     margin: auto;
     width: 390px !important;
-    height: 250px;
   }
 }
 
@@ -19,10 +19,11 @@
 }
 
 .post {
-  margin-inline: 1rem;
-  margin-top: 1rem;
-  padding-top: 4px;
-  padding-inline: 8px;
+  margin-inline: 1rem !important;
+  margin-top: 1rem !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-inline: 8px !important;
   width: auto;
   height: auto;
 }
