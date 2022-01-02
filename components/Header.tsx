@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Toolbar from '@mui/material/Toolbar';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';

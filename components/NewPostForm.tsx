@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Button, CircularProgress, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
