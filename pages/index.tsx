@@ -15,12 +15,6 @@ const Home: NextPage = ({userData}) => {
   useEffect(() => {
     dispatch(userActions.setData(userData));
   }, [userData, dispatch])
-  const { data: session, status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      signIn();
-    },
-  });
   return (
     <React.Fragment>
       <Header isLoggedIn={true}></Header>
