@@ -16,7 +16,7 @@ const Profile = () => {
   const router = useRouter();
   return <React.Fragment><Header isLoggedIn={true}/>
   <Grid container justifyContent="center" spacing={4} mt={'10vh'}>
-  <Chip color="primary" className={styles.chip} avatar={<Avatar src={userData.profile.img}/>} label={`${userData.profile.firstName}\'s Posts`}> </Chip>
+  <Chip color="primary" avatar={<Avatar src={userData.profile.img}/>} label={`${userData.profile.firstName}\'s Posts`}> </Chip>
   </Grid>
   <Grid container justifyContent="center" spacing={4} mt={'5vh'}>
     <UserPosts/>
