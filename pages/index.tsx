@@ -35,6 +35,7 @@ export async function getServerSideProps({req}) {
   const session = await getSession({req})
   console.log("retrieved session at " + Date.now());
   if (session) {
+    console.log("DB Connection attempt started at" + Date.now());
     await dbConnect();
     console.log("Connected to DB at " + Date.now());
     const email = session?.user?.email;
