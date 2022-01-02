@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import { Grid } from "@mui/material";
 import Post from "./Post";
