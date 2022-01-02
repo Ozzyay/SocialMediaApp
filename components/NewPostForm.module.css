@@ -1,0 +1,15 @@
+@media (max-width: 650px) {
+  .cont {
+    width: 440px !important;
+    margin: auto;
+  }
+}
+
+.btn {
+  margin-top: 0.5rem
+}
+
+.div {
+  margin-inline: 1rem;
+  padding-top: 1rem;
+}

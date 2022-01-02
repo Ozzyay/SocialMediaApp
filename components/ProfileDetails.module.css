@@ -1,0 +1,11 @@
+.cont {
+  width: 600px;
+  height: 170px;
+}
+
+.flexCont {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}

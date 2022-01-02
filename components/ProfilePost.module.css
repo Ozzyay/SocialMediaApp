@@ -1,0 +1,32 @@
+.card {
+  width: 600px;
+  height: 170px;
+}
+
+@media (max-width: 650px) {
+  .card {
+    margin: auto;
+    width: 440px !important;
+  }
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+
+.post {
+  margin-inline: 1rem;
+  margin-top: 1rem;
+  padding-top: 4px;
+  padding-inline: 8px;
+  width: auto;
+  height: 50px;
+}
+
+.btn {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
