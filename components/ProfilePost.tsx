@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Avatar, Button, Card, CircularProgress, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import { useRouter } from "next/router";
