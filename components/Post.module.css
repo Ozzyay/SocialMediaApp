@@ -1,7 +1,6 @@
 .card {
   width: 600px;
-  min-height: 170px;
-  height: auto;
+  height: 170px;
 }
 
 @media (max-width: 650px) {
