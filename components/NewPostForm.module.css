@@ -1,12 +1,13 @@
 @media (max-width: 650px) {
   .cont {
-    width: 440px !important;
+    width: 390px !important;
+    height: 250px;
     margin: auto;
   }
 }
 
 .btn {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem !important;
 }
 
 .div {
