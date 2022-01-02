@@ -31,9 +31,12 @@ const Home: NextPage = ({userData}) => {
 }
 //@ts-ignore
 export async function getServerSideProps({req}) {
+  console.log("started at " + Date.now())
   const session = await getSession({req})
+  console.log("retrieved session at " + Date.now());
   if (session) {
     await dbConnect();
+    console.log("Connected to DB at " + Date.now());
     const email = session?.user?.email;
     //@ts-ignore
     const Model = loadModel();
