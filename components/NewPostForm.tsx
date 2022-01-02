@@ -47,8 +47,8 @@ const NewPostForm = () => {
         <div className={styles.div} ml={2} pt={2} mr={2}>
         <TextField label="New Post" fullWidth size="small" variant="outlined" multiline rows={3} onChange={formChangeHandler} inputRef={inputRef}></TextField>
         {disabled && button}
-        {!disabled && !loading && <Button type="submit" variant="contained" className={styles.btn}>Post</Button>}
-        {loading && <Button type="submit" variant="contained" className={styles.btn} disabled><CircularProgress size={25}/></Button>}
+        {!disabled && !loading && <Button type="submit" variant="contained" mt={1} className={styles.btn}>Post</Button>}
+        {loading && <Button type="submit" variant="contained" mt={1} className={styles.btn} disabled><CircularProgress size={25}/></Button>}
         </div>
         </form>
       </Paper>
