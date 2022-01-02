@@ -6,10 +6,12 @@
 }
 
 .btn {
-  margin-top: 0.5rem
+  margin-top: 0.5rem;
+  overflow: auto;
 }
 
 .div {
   margin-inline: 1rem;
   padding-top: 1rem;
+  overflow: auto;
 }
