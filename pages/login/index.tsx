@@ -7,7 +7,7 @@ import React from 'react';
 import { Paper, Typography } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import IconButton from '@mui/material/IconButton';
-import styles from './index.module.css';
+import styles from './Login.module.css';
 //@ts-ignore
 const Login: NextPage = ({ providers }) => {
   const googleSigninHandler = async () => {
