@@ -4,14 +4,14 @@ import Header from '../../components/Header';
 import {getProviders, signIn} from 'next-auth/react';
 import  Grid from '@mui/material/Grid';
 import React from 'react';
-import { Button, Paper, Typography } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import IconButton from '@mui/material/IconButton';
 import styles from './index.module.css';
 //@ts-ignore
 const Login: NextPage = ({ providers }) => {
   const googleSigninHandler = async () => {
-    signIn(providers.google.id, {callbackUrl: "/"});
+    signIn('google', {callbackUrl: "/"});
   };
   const paperStyle = {padding: 20, height: '40vh', width: 320, margin:"20px auto", marginTop: '15vh'};
   return <React.Fragment>
@@ -29,13 +29,5 @@ const Login: NextPage = ({ providers }) => {
   </React.Fragment>;
 };
 
-export async function getServerSideProps() {
-  const providers = await getProviders();
-  return {
-    props: {
-      providers,
-    },
-  };
-}
 export default Login;
 
