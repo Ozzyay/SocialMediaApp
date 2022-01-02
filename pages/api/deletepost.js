@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const postData = data.post;
   await dbConnect();
   try {
-    const Model = mongoose.model('users');
+    const Model = loadModel();
     await Model.updateOne({email: email}, { $pull:  {posts:{body: postData}}});
     res.status(200).json({'success': 'true'});
   } catch (err) {
