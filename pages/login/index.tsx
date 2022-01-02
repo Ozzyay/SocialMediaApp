@@ -13,9 +13,6 @@ const Login: NextPage = ({ providers }) => {
   const googleSigninHandler = async () => {
     signIn(providers.google.id, {callbackUrl: "/"});
   };
-  const githubSigninHandler = () => {
-
-  };
   const paperStyle = {padding: 20, height: '40vh', width: 320, margin:"20px auto", marginTop: '15vh'};
   return <React.Fragment>
     <Header isLoggedIn={false}></Header>
@@ -26,7 +23,6 @@ const Login: NextPage = ({ providers }) => {
         <Grid align='center' mt={4} gap={2}>
           <IconButton className={styles.myCustomButton} onClick={googleSigninHandler}><GoogleIcon fontSize='large'></GoogleIcon></IconButton>
         </Grid>
-        <Button className={styles.testBtn}variant="outlined">Or sign in as a test user!</Button>
         </Grid>
         </Paper>
         </Grid>
