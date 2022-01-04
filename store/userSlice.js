@@ -13,7 +13,7 @@ const userSlice = createSlice({
     setData(state, action) {
       state.email = action.payload.email;
       state.profile = action.payload.profile;
-      state.posts = [...action.payload.posts];
+      state.posts = action.payload.posts || [];
     },
     clearData(state) {
       state = initialValue;

@@ -38,7 +38,7 @@ export async function getServerSideProps({req}) {
     console.log("DB Connection attempt started at" + Date.now());
     await dbConnect();
     console.log("Connected to DB at " + Date.now());
-    const email = session?.user?.email;
+    const email = session.user.email;
     //@ts-ignore
     const Model = loadModel();
     const data = await Model.find({});
@@ -53,15 +53,15 @@ export async function getServerSideProps({req}) {
     if (!user) {
       const newUser = new Model({
         email: email,
-        profile: {firstName: session.user.name, lastName: null, img: session.user.image},
+        profile: {firstName: session.user.name, img: session.user.image},
         posts: []
       })
-      newUser.save();
-      return {props: {userData: {email: email, profile: {firstName: session.user.name, lastName: null, img: session.user.image}}}}
+      await newUser.save();
+      return {props: {userData: {email: email, profile: {firstName: session.user.name, img: session.user.image}}}}
     }
     const allPosts = JSON.parse(JSON.stringify(allPostsArray));
     const userPosts = JSON.parse(JSON.stringify(user.posts));
-    return {props: {userData: {email: user.email, profile: {...user.profile}, posts: [...userPosts], allPosts: [...allPosts]}}};
+    return {props: {userData: {email: user.email, profile: {firstName: user.profile.firstName, img: user.profile.img}, posts: [...userPosts], allPosts: [...allPosts]}}};
   }
   return {redirect: {
   destination: '/login',
