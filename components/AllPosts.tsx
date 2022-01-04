@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 
 const AllPosts = (props: {allPosts: any[]}) => {
   let finalArray: any[];
-  if (props.allPosts.length > 0) {
+  if (props.allPosts.length) {
     let sortedArray = props.allPosts.sort((a, b) => {
       //@ts-ignore
       return new Date(b.date) - new Date(a.date);
