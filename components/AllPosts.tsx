@@ -3,7 +3,7 @@ import React from "react";
 import { Grid } from '@mui/material';
 
 const AllPosts = (props: {allPosts: any[]}) => {
-  let finalArray: any[];
+  let finalArray: any[] = [];
   if (props.allPosts.length) {
     let sortedArray = props.allPosts.sort((a, b) => {
       //@ts-ignore
