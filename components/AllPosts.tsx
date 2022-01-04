@@ -9,7 +9,7 @@ const AllPosts = (props: {allPosts: any[]}) => {
       //@ts-ignore
       return new Date(b.date) - new Date(a.date);
   })
-    let finalArray: any[] = sortedArray.slice(0, 11);
+   finalArray = sortedArray.slice(0, 11);
   }
   return <React.Fragment>
   {(finalArray.length > 0) && finalArray.map((elem) => {
